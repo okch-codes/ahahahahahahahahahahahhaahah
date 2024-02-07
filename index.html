@@ -13,13 +13,13 @@
 
     <script>
         //Initially load some content
-        for(let i = 0; i < 1000; i++) document.getElementById('content').innerText += "ahahahahahahahahahahahhaahah";
+        for(let i = 0; i < 1000; i++) document.getElementById('content').innerHTML += "ahahahahahahahahahahahhaahah";
 
         // Function to add more content when scrolling to the bottom of the page
         window.onscroll = function(ev) {
             if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
                 for(let i = 0; i < 1000; i++)
-                document.getElementById('content').innerText += "ahahahahahahahahahahahhaahah";
+                document.getElementById('content').innerHTML += "ahahahahahahahahahahahhaahah";
             }
         };
     </script>
