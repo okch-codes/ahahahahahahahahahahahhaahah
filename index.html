@@ -4,8 +4,7 @@
     <title>Infinite Laughter</title>
     <style>
         body {
-            font-family: 'Courier New', monospace;
-            text-transform: uppercase;
+            font-family: 'Helvetica', monospace;
         }
     </style>
 </head>
@@ -14,13 +13,13 @@
 
     <script>
         //Initially load some content
-        for(let i = 0; i < 1000; i++) document.getElementById('content').innerHTML += "ahahahahahahahahahahahhaahah ";
+        for(let i = 0; i < 1000; i++) document.getElementById('content').innerText += "ahahahahahahahahahahahhaahah";
 
         // Function to add more content when scrolling to the bottom of the page
         window.onscroll = function(ev) {
             if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
                 for(let i = 0; i < 1000; i++)
-                document.getElementById('content').innerHTML += "ahahahahahahahahahahahhaahah ";
+                document.getElementById('content').innerText += "ahahahahahahahahahahahhaahah";
             }
         };
     </script>
