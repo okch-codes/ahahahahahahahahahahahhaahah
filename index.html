@@ -1,1 +1,35 @@
-hello
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Just scroll</title>
+    <style>
+        body {
+            font-size: 20px;
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+<body>
+    <div id="content">ahahahahahahahahahahahhaahah</div>
+
+    <script>
+        // Function to repeat the content indefinitely
+        function repeatContent() {
+            const contentElement = document.getElementById('content');
+
+            window.onscroll = function() {
+                // Check if we're near the bottom of the scroll
+                if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
+                    for(let i = 0; i < 100; i++){      //Add the content a hundred times every time scroll reaches the bottom
+                        let textNode = document.createTextNode("ahahahahahahahahahahahhaahah" + ' ');
+                        contentElement.appendChild(textNode);
+                    }
+                }
+            };
+        }
+
+        // Call the function on initial load
+        repeatContent();
+    </script>
+</body>
+</html>
